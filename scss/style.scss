@@ -1,0 +1,820 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap');
+@font-face {
+	font-family: 'Akzidenz';
+	src: url('../fonts/AkzidenzGroteskBQ-BdCnd.eot');
+	src: local('☺'), url('../fonts/AkzidenzGroteskBQ-BdCnd.woff') format('woff'), url('fonts/AkzidenzGroteskBQ-BdCnd.ttf') format('truetype'), url('fonts/AkzidenzGroteskBQ-BdCnd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+$fontFamily:PT+Sans;
+/*$minwidth:320px;
+$mw:880;
+$md1:$mw+12px;
+$md2:992.98;
+$md3:767.98;
+$md:479.98;*/
+header{
+   /*border: 2px solid red;*/
+   margin: 29px auto 33px auto;
+   width: 864px;
+}
+li {
+   list-style-type: none; /* Убираем маркеры */
+  }
+a{
+   text-decoration:none;
+}
+.left{
+   display: block;
+   position: relative;
+   right: -12px;
+}
+/*.container {/*max-width: $mw+px; margin: 0 auto; width: 100%;
+   @media (max-width: $md1+px){max-width: 970px;}
+   @media (max-width: $md2+px){max-width: 750px;}
+   @media (max-width: $md3+px){max-width: none; padding:0 10px;}*/
+/*}*/
+.header-top {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 15px;
+}
+.header-top-lang {
+   display: flex;
+}
+.header-top-lang__item {
+   margin-right: 20px;
+   display: block;
+   color:#000;
+   line-height: 19px;
+   font-size: 12px;
+   font-family: 'Bebas Neue';
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-decoration: underline;
+   position: relative;
+   top:-4px;   
+   right:10px;  
+   &.active{
+      background-color: black;
+      color: white;
+      padding: 0px 4px 0px 4px;
+
+   }
+
+}
+.header-top__link {
+   font-family: 'Akzidenz';
+   text-decoration: underline;
+   text-transform: uppercase;
+   font-size: 15px;
+   color:#000;
+   position: relative;
+   z-index: 11;
+   top:-4px;    /*отступ*/
+   right:-10px;
+   @media(max-width: 480px){
+      font-size: 13px;
+   }
+}
+.header-bottom {
+   display: flex;
+   align-items: center;
+   margin-top: -20px ;  
+   position: relative;
+   top:10px;  
+}
+.header-bottom__collumn {
+  flex:0 0 33.333%;
+}
+.header-bottom-menu {
+   margin: 0px auto 0px auto; /*bpvtybk 17% auto*/
+}
+.header-bottom-menu-list {
+   display: flex;
+   justify-content: space-around;
+   &.left{
+      margin: 3px auto 0px auto;
+      position: relative;
+      left:-60px;
+   }
+   &.hright{
+      margin: 3px auto 0px auto;
+      position: relative;
+      left:30px;
+      padding: 0px;
+   }
+}
+.header-bottom-menu__link {
+   display:flex;
+   font-family: 'Akzidenz';
+   line-height: 25px;
+   text-transform: uppercase;
+   font-size: 15px;
+   color:#000;
+   letter-spacing: 1.5px;
+  /* &.r{
+      position: relative;
+      left:0px;
+   }*/
+}
+.service{
+   min-width: 86px;
+}
+.header-logo {
+   display: flex;
+   flex-direction:column;
+   position: relative;
+   left:-15px;
+   z-index: 11;
+   top:10px;    /*отступ*/
+   align-items:center;
+}
+.haeder-logo__text2{
+width: 88px;
+height: 8px;
+color: #000000;
+font-family: 'Bebas Neue';
+font-size: 10px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 9px;
+position: relative; 
+top:-9px;      /*отступ*/
+
+}
+.haeder-logo__text {
+   position: relative;
+   top:-9px;      /*отступ*/
+   width: 41px;
+   height: 9px;
+   color: #000000;
+   font-family: 'Bebas Neue';
+   font-size: 10px;
+   font-weight: 400;
+   line-height: 25px;
+   text-transform: uppercase;
+   letter-spacing: 9px;
+   margin-top: -15px;   /*отступ*/
+   @media(max-width: 767px){
+      font-size: 8px;
+   }
+   @media(max-width: 480px){
+      letter-spacing: 5px;
+   }
+   &.textlogo{
+      position: relative;
+      top:0px;
+      letter-spacing: 2.72px;
+   }
+   }
+   .logo-img {
+      margin: 13px 0% 22px 0%;
+   }
+.header-menu__icon{display:none;}
+@media (max-width:767px){
+   .header-menu__icon{
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 10px;
+      width:30px;
+      height:18px;
+      cursor:pointer;
+      span{transition-duration: 0.3s; position:absolute; top:8px;left:0px;width:100%;height:2px;background-color:#000;
+         &:first-child{top:0px;}
+         &:last-child{top: auto;bottom:0px;}
+          }
+      &.active{
+         z-index:5;
+         span{
+            transform: scale(0); 
+                &:first-child{top: 8px;transform: rotate(-45deg); transition: top 0.2s linear, transform 0.2s ease-in 0.2s;}
+                &:last-child{bottom: 8px;transform: rotate(45deg);transition: top 0.2s linear, transform 0.2s ease-in 0.2s;}
+            }
+         }            
+      }
+   .header-menu{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow:auto;
+      right:120%;
+      top:0;
+      background-color: #ffffff;
+      padding: 65px 10px 20px 10px;
+      &.active{
+         z-index:4;
+         transition-duration: 0.6s;
+         right:-10px;
+      }
+   }
+}
+/*992!!!!!!!!!!!!!!!!*/
+@media(max-width: 992px){
+   header{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+   }
+   .header-top__link{
+      position: relative;
+      right: 25px;
+   }
+   &.hleft{
+      padding: 0px 0px 0px 0px;
+      margin:0px 0px 0px 0px;
+      position: relative;
+      left: 30px;
+   }
+   &.right{
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+      position: relative;
+      right: 30px;
+   }  
+  .header-logo {
+     position: relative;
+     right: 50px;
+  }
+  
+  .header-top-lang__item{
+     position: relative;
+     right:-25px;
+
+  }
+}
+/*767!!!!!!!!!!!!!!!!*/
+@media (max-width:767px){ 
+   /*дальше жопа*/
+   .header-bottom-menu{
+      margin: 0px;
+   }
+   header{
+      width: 100%;
+      margin: 29px auto 0px auto;
+   }
+   .header-top__link{
+      position: relative;
+      top:-30px;
+    }
+   .header-top{
+      display: flex;
+      justify-content:flex-end;
+   }
+   .hleft{
+      margin: auto;
+      position: relative;
+      left: 15px;
+      top:3px;
+   }
+   .header-logo{
+      position: relative;
+      top: -30px;
+      left:20px;
+   }
+   .logo-img{
+      margin:2px auto 5px auto;
+      img{width: 150px;}
+     }
+   .header-bottom-menu-list{
+      display: block;
+      text-align: left;
+      li{
+         margin-left: 15px!important;
+      }
+   }
+   .header-top-lang{
+      margin:0px auto 15px auto ;
+      position: relative;
+      right: 15px;
+   }
+   .left{
+      display: block;
+      /*border:2px solid red;*/
+}
+.right{
+   left:-35px;
+}
+.r{
+position: relative;
+left:10px;
+}
+.hright{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   left: -30px;
+   li{
+      margin-left: 15px!important;
+       &:last-child{
+      margin-left: 5px!important;
+       }
+   }
+}
+}
+/*480!!!!!!!!!!!!!!!!*/
+@media(max-width: 480px){
+   .logo-img {
+         margin: 0px 0% 2px 0%;
+         img{width: 100px;}
+      }
+      .header-logo {
+         position: relative;
+         right: 90px;
+      }
+      .header-top__link{
+         position: relative;
+         left:-10px;
+      }
+      .header-bottom-menu {
+         margin: auto; 
+      }
+      .header-top-lang__item{
+         position: relative;
+         right:-20px;
+      }
+      .header-top-lang{
+         margin:0px 0px 15px 0px ;
+      }
+      .header-bottom{
+         margin: -15px 0% 0px 0%;
+      }
+}
+
+
+
+
+
+
+/*ДАЛЕЕ ИДЕТ НЕ ШАПКА*/
+.private{
+   display: flex;
+   background-color: #000000;
+   width: 100%;
+   margin-bottom: 75px;
+}
+/*.private-body{
+   padding: 75px 0px 75px 60px;
+}*/
+.private__image {
+   background-image: url(../img/01.jpg);
+   background-repeat: no-repeat;
+   height: 100%;
+   background-size: cover;
+}
+.private__collumn{
+   flex: 0 0 50%;
+   background-color: #000000;
+}
+.private-body-content{
+   padding: 75px 0px 75px 60px;
+   max-width: 305px;
+}
+.private-name {
+padding-bottom: 20px;
+color: #ffffff;
+font-family: 'Akzidenz';
+font-size: 50px;
+line-height: 50px;
+text-transform: uppercase;
+letter-spacing: 5px;
+}
+.private-text {
+/*border: 2px solid red;*/
+position: relative;
+   top:5px;
+color: #ffffff;
+font-family: 'PT Sans';
+font-size: 15px;
+line-height: 25px;
+margin: 0px 0px 50px 0px;
+}
+.btn{
+  background-color:black;
+  padding: 15px 23px 15px 23px;
+  position: relative;
+  top:5px;
+  width: 88px;
+  height: 15px;
+  color: #fffffe;
+  font-family: 'Bebas Neue';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+   &.btn--w{
+      background-color: #ffffff;
+      padding: 15px 33px 22px 33px;
+      width: 88px;
+      height: 13px;
+      color: #000000;
+      text-decoration: none;
+      letter-spacing: 1.8px; 
+      
+   }
+}
+.private-body-buttons{
+   display: flex;
+   align-items: center;
+}
+
+.products {
+   margin-bottom: 40px;
+}
+.container {
+}
+.products-body {
+   display: flex;
+   justify-content:center;
+
+}
+.products-collumn {
+   margin-bottom: 40px;
+   flex: 0 0 15%;
+}
+.products-item {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      /*width: 219px;*/
+		&__image {
+         display:block;
+         padding: 0px 0px 100% 0px;
+         margin:  0px 0px 25px 0px;
+         background-size: cover;
+         
+        /* background-size: cover;*/
+		}
+		&__title {
+      padding: 0px 10px 0px 0px;
+      display: block;
+      height: 50px;
+      overflow: hidden;
+      font-family: 'Bebas Neue';
+      position: relative;
+      left: 5px;
+      max-width: 165px;
+      margin-top: 25px;
+      color: #000000;
+      font-size: 25px;
+      line-height: 25px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      }
+		&__btn {
+         display: block;
+         padding: 18px 34px 17px 34px;
+      width: 88px;
+      height: 15px;
+      color: #ffffff;
+      font-family: 'Bebas Neue';
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 25px;
+      text-decoration: none;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+		}
+
+		&__link {
+         display: block;
+         position: relative;
+         top:30px;
+         padding: 15px 23px 15px 0px!important;
+         text-decoration: underline;
+      }
+      &__text{
+         padding: 0px 10px 0px 0px;
+         flex: 1 1 auto;
+         max-width: 175px;
+         margin: 0px 0px 30px 0px;
+         color: #000000;
+         font-family: "PT Sans";
+         font-size: 15px; 
+         line-height: 25px;
+      }
+}
+.products-item__btns{
+   width: 190px;
+}
+.img{
+   display:none;
+}
+@media(max-width: 767px){
+   .private{
+      margin-bottom: 40px;
+   }
+   .products{
+      margin-bottom: 0px;
+   }
+   .products-collumn {
+      margin-bottom: 40px;
+      flex: 0 0 50%;
+   }
+   .products-body {
+      flex-wrap: wrap;
+      margin: 0px 10px 0px 10px;
+   }
+   .private-body-content{
+   padding: 50px 0px 50px 30px;
+   }
+   .private-name{
+      font-size: 35px;
+      margin: 0px 0px 20px 0px;
+   }
+   .private-text{
+      margin: 0px 0px 30px 0px;
+   }
+   .private__collumn{
+      flex: 1 1 50%;
+      &:first-child{
+         display: none;
+      }
+}
+}
+@media(max-width: 400px){
+   .products-collumn {
+      flex: 1 1 100%;
+   }
+   .products-item__text{
+      max-width: 100%;
+      padding: 0px 0px 15px 0px;
+   }
+   .products-item__title{
+      max-width: 100%;
+      height: auto;
+      overflow: visible;
+      padding: 0px 0px 20px 0px;
+   }
+   .products-item__image{
+
+   }
+}
+
+.why__image {
+   background-image: url(../img/11.jpg);
+   background-repeat: no-repeat;
+   height: 100%;
+   background-size: cover;
+}
+.why__name{
+padding-bottom: 20px;
+color: #ffffff;
+font-family: 'Akzidenz';
+font-size: 50px;
+line-height: 50px;
+text-transform: uppercase;
+letter-spacing: 5px;
+margin: 0px 0px 0px 200px;
+}
+.why {
+}
+.why-top {
+   display: flex;
+   background-color: black;
+		&__collumn {
+         flex: 0 0 50%;
+         @media(max-width: 767px){
+            flex: 0 0 100%;
+            &:last-child{
+               display: none;
+            }
+         }
+		}
+
+		&__text {
+      color: #ffffff;
+      font-family: 'Akzidenz';
+      font-size: 50px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: right;
+      padding: 55px 60px 55px 0px;
+      @media(max-width: 767px){
+         padding: 30px 0px;
+         font-size: 40px;
+         text-align: center;
+      }
+		}
+
+		&__image {
+         height: 100%;
+         background-size: cover;
+		}
+}
+.why-body {
+   background-color: #ebebeb;
+   padding: 50px 0px 0px 0px;
+}
+.why-body-collumn {
+   max-width: 500px;
+   margin-bottom: 50px;
+   @media(max-width: 992px){
+      flex: 0 0 100%;
+   }
+
+}
+.why-body-row{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:center;
+}
+.why-body-item {
+   display: flex;
+}
+.why-body-item-icon {
+   flex: 0 0 100px;
+   height: 100px;
+   display: flex;
+   justify-content: center; align-items: center;
+   background-color: black;
+}
+.why-body-item-body {
+      flex: 1 1 auto;
+      padding: 0px 0px 0px 11px;
+		&__title {
+         font-family: 'Akzidenz';
+         text-transform: uppercase;
+         letter-spacing: 2.5px;
+         font-size: 25px;
+		}
+
+		&__text {
+         padding: 0px 15px 0px 0px;
+         font-family: "PT Sans";
+		}
+}
+
+
+/*жеска*/
+
+
+.contacts {
+   padding: 80px 0px 0px 0px;
+}
+.container {
+}
+.contacts-title {
+/*padding: 20px;*/
+font-family: 'Akzidenz';
+font-size: 50px;
+text-transform: uppercase;
+margin: 0px 0px 30px 0px;
+}
+.contacts-body {
+   display: flex;
+   flex-wrap: wrap;
+		&__collumn {
+         flex: 0 0 50%;
+         margin: 0px 0px 20px 0px;
+         @media (max-width:767px) {
+            flex: 1 1 100%;
+         }
+		}
+
+		&__item {
+         font-size: 15px;
+         color: black;
+         display: inline-block;
+         line-height: 27px;
+         padding: 0px 0px 0px 35px;
+		}
+
+		&__item--1 {
+         background: url('/img/contacts/social/1.svg') left no-repeat;
+		}
+
+		&__item--2 {
+         background: url('/img/contacts/social/email.svg') left no-repeat;
+		}
+
+		&__item--3 {
+         background: url('/img/contacts/social/3.svg') left no-repeat;
+		}
+}
+.contacts-social {
+      display: flex;
+		&__item {
+         margin: 0px 30px 0px 0px;
+         &:last-child{
+            margin: 0px 0px 0px 0px;
+         }
+		}
+
+		&__item--1 {
+		}
+
+		&__item--2 {
+		}
+
+		&__item--3 {
+		}
+
+		&__item--4 {
+		}
+}
+.contacts-content {
+      display: flex;
+      flex: 0 0 50%;
+      background-color: black;
+      @media (max-width:767px) {
+         display: block;
+      }
+		&__collumn {
+         display: flex;
+      flex: 0 0 50%;
+      background-color: black;
+		}
+
+}
+#wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+   width: 100%;
+}
+#map-9cd199b9cc5410cd3b1ad21cab2e54d3{
+}
+.contacts-content-form {
+      padding: 55px 60px;
+      @media (max-width:767px) {
+         padding: 30px;
+      }
+		&__title {
+         font-family: 'Akzidenz';
+         color:white;
+         font-size: 25px;
+         text-transform: uppercase;
+         margin: 0px 0px 30px 0px;
+
+		}
+
+		&__btn {
+		}
+}
+.contacts-content-form-body {
+}
+.contacts-content-form-line {
+  margin: 0px 0px 25px 0px; 
+}
+.input {
+}
+.contacts-content-form__btn {
+   width: 177px!important;
+   height: 57px!important;
+}
+.btn {
+}
+.btn--w {
+}
+
+input[type=text],input[type=email],input[type=tel],textarea{-weblit-appearance:none;-moz-appearance:none;appearance:none;}
+.input{
+   border-radius: 0 !important;
+   width: 100%;
+   display: block;
+   padding: 0px 18px;
+   border: 2px solid #959595;
+   background-color: #252525;
+   color:#959595;
+   font-size: 15px;
+   &.focus{}
+   &.err{
+      border: 2px solid red;
+   }
+}
+textarea.input{
+   resize:none;
+   height: 100px;
+   padding: 10px 18px;
+}
+.container {
+}
+.footer-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 125px;
+		&__collumn {
+		}
+}
+.footer {
+
+		&__text {
+         columns: #4d4d4d;
+         font-size: 15px;
+         line-height: 25px;
+         a{text-decoration: underline; color:#4d4d4d;
+         &:hover{text-decoration:none;}}
+		}
+
+		&__logo {
+		}
+}

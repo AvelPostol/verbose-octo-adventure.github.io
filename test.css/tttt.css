@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+@font-face {
+	font-family: 'Akzidenz';
+	src: url('../fonts/AkzidenzGroteskBQ-BdCnd.eot');
+	src: local('☺'), url('../fonts/AkzidenzGroteskBQ-BdCnd.woff') format('woff'), url('fonts/AkzidenzGroteskBQ-BdCnd.ttf') format('truetype'), url('fonts/AkzidenzGroteskBQ-BdCnd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap');
+$fontFamily:PT+Sans;
+/*$minwidth:320px;
+$mw:880;
+$md1:$mw+12px;
+$md2:992.98;
+$md3:767.98;
+$md:479.98;*/
+header{
+   /* margin: 32px 248px 33px 248px;*/
+   margin: 32px 15% 33px 18%;
+   width: 872px;
+   min-height: 140px;
+   @media (max-width:1250px){    
+       margin: 32px 20px 33px 13%;
+}
+   @media (max-width:1100px){
+          margin: 32px 20px 33px 8%;   
+   }
+   @media (max-width:1000px){
+      margin: 32px 20px 33px 5%;
+}
+   @media (max-width:900px){
+   margin: 32px 0% 33px 0%;
+   max-width: 150%;
+}
+}
+li {
+   list-style-type: none; /* Убираем маркеры */
+  }
+a{
+   text-decoration:none;
+}
+
+.container {/*max-width: $mw+px; margin: 0 auto; width: 100%;
+   @media (max-width: $md1+px){max-width: 970px;}
+   @media (max-width: $md2+px){max-width: 750px;}
+   @media (max-width: $md3+px){max-width: none; padding:0 10px;}*/
+}
+.header-top {
+   display:flex;
+   justify-content: space-between;
+}
+.header-top-lang {
+   display:flex;
+   
+}
+
+.header-top-lang__item {
+   margin-right: 20px;/*норм*/   /*отступ*/
+   display: block;
+   color:#000;
+   line-height: 19px;
+   font-size: 12px;
+   font-family: 'Bebas Neue';
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-decoration: underline;
+   &.active{
+      background-color: black;
+      color: white;
+      padding: 0px 4px 0px 4px;
+
+   }
+
+}
+.header-top__link {
+   font-family: 'Akzidenz';
+   text-decoration: underline;
+   text-transform: uppercase;
+   font-size: 15px;
+   color:#000;
+   position: relative;
+   top:-2px;    /*отступ*/
+   right:3px;   /*отступ*/
+   
+
+}
+.header-bottom {
+   display: flex;
+   align-items: center;
+   margin-top: -20px ;   /*отступ*/
+   position: relative;
+   top:10px;       /*отступ*/
+}
+.header-bottom__collumn {
+  flex:0 0 33.333%;
+}
+.header-bottom-menu { 
+   margin-left: -13%;       /*отступ*/
+}
+.header-bottom-menu-list {
+   display: flex;
+   justify-content: space-between;
+}
+.header-bottom-menu__link {
+   display:flex;
+   font-family: 'Akzidenz';
+   line-height: 25px;
+   text-transform: uppercase;
+   font-size: 15px;
+   color:#000;
+   letter-spacing: 1.5px;
+}
+.left{
+   /*padding-right: 45px;*/
+   padding-right: 20%;   /*отступ*/
+}
+.right{
+   /*margin-right:25px;*/
+   padding-left:27%;     /*отступ*/
+}
+.service{
+   min-width: 86px;
+}
+
+.header-logo {
+   display: flex;
+   flex-direction:column;
+   position: relative;
+   top:10px;    /*отступ*/
+   align-items:center;
+}
+.haeder-logo__text2{
+width: 88px;
+height: 8px;
+color: #000000;
+font-family: 'Bebas Neue';
+font-size: 10px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 8px;
+position: relative; 
+top:-9px;      /*отступ*/
+
+}
+.haeder-logo__text {
+position: relative;
+top:-6px;
+width: 41px;
+height: 9px;
+color: #000000;
+font-family: 'Bebas Neue';
+font-size: 10px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 7px;
+margin-top: -15px;     /*отступ*/
+}
+.logo-img {
+   display: inline-block;
+   margin: 13px 0px 22px 0px;    /*отступ*/
+}
